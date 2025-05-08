@@ -22,8 +22,8 @@ class PriceServiceTest {
 
     @Test
     fun `should return correct PriceResponse when ticker is tracked and price is available`() {
-        val ticker : String = "BTC-USD"
-        val price : Double = 97328.73
+        val ticker = "BTC-USD"
+        val price = 97328.73
 
         every { exchangePriceService.getPrice(ticker)} returns price
 
@@ -36,7 +36,7 @@ class PriceServiceTest {
 
     @Test
     fun `should return null PriceResponse when ticker is not tracked or price is unavailable`() {
-        val ticker : String = "FKE-SYM"
+        val ticker = "FKE-SYM"
 
         every { exchangePriceService.getPrice(ticker)} returns null
 

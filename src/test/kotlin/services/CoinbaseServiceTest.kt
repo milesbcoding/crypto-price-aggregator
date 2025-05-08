@@ -32,7 +32,7 @@ class CoinbaseServiceTest {
     @Test
     fun `prices map should return correct price for calls on tracked pairs`() = runTest {
         val testSymbol = "BTC-USD"
-        val expectedPrice:Double = 97328.73
+        val expectedPrice = 97328.73
         val mockResponse = CoinbaseTickerResponse(price = expectedPrice)
 
         val engine = MockEngine { request ->
@@ -59,7 +59,7 @@ class CoinbaseServiceTest {
     @Test
     fun `prices map should return null for calls on untracked pairs`() = runTest {
         val testSymbol = "BTC-USD"
-        val expectedPrice:Double = 97328.73
+        val expectedPrice = 97328.73
         val mockResponse = CoinbaseTickerResponse(price = expectedPrice)
 
         val engine = MockEngine { request ->
@@ -85,8 +85,6 @@ class CoinbaseServiceTest {
     @Test
     fun `prices map should be empty due to failed fetch cycle requests`()= runTest {
         val testSymbol = "BTC-USD"
-        val expectedPrice:Double = 97328.73
-        val mockResponse = CoinbaseTickerResponse(price = expectedPrice)
 
         val engine = MockEngine { request ->
             respond(
