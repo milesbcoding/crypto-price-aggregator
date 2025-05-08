@@ -16,7 +16,7 @@ A lightweight cryptocurrency price aggregator built using Kotlin and [Ktor](http
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/milesbcoding/crypto-price-aggregator
-   cd ktor-sample
+   cd crypto-price-aggregator
    ```
 
 2. **Run the application using the Gradle wrapper**:
@@ -56,6 +56,8 @@ curl http://0.0.0.0:8080/prices/BTC-USD
 ```bash
   ["BTC-USD", "ETH-USD", "ETH-BTC"]
 ```
+> Suggestion: I would suggest using postman for testing API calls
+
 
 > Note: The symbol must match the Coinbase format, such as `BTC-USD`, `ETH-EUR`, etc. They can be configured from within the code. 
 
